@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <title>CV Filter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH6gOWRmoWx2iKw9r+OB8LC9sOiw/lqFIoeCXGaM9D6wUksdCQz8fnwivXkYOf7z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://unpkg.com/mammoth/mammoth.browser.js"></script>
+</head>
+<body>
+    <header>
+        
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+       
+        <a href="#fucionamiento" id="nav-item"><b>¿Cómo funciona?</b></a>    
+        <a href="#consejos" id="nav-item"><b>Consejos</b></a>
+        <a href="#filtro" id="nav-item"><b>Filtrar CV</b></a>
+        <a href="#ejemplos" id="nav-item"><b>Mejorar CV</b></a>  
+    
+    </header>
+    <img id="pic01" src="img\pic01.jpg" alt="picture1">
+    
+    <img id="pic02" src="img\pic01.jpg" alt="picture2">
+
+    <div class="container mt-5" id="filtro">
+        
+        
+        <h2 class="text-center">Filtro de Currículums Vitae</h2>
+        <form id="cvForm" class="mt-4">
+            <div class="mb-3">
+                <label for="cvFile" class="form-label">Sube tu CV (PDF/DOC/DOCX)</label>
+                <input type="file" class="form-control" id="cvFile" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Analizar CV</button>
+        </form>
+    
+        <div class="mt-4" id="result"></div>
+    </div>
+    <div class="container mt-5" id="fucionamiento">
+        <h3>¿Qué es CV Filter?</h3>
+        <p>🚀CV Filter es una herramienta web que analiza archivos PDF y Docx
+            para evaluar su compatibilidad con sistemas de seguimiento de candidatos (ATS). 
+            Examina la presencia de palabras clave esenciales, estructura adecuada y formato óptimo. 
+            Si el CV cumple con al menos el 70% de los criterios y sigue las normas ATS, se considera 
+            válido. En caso contrario, proporciona sugerencias para mejorarlo. Ideal para cualquier 
+            sector laboral, ayuda a optimizar el CV antes de enviarlo a reclutadores. 🚀
+        </p>
+        <p><b>Carga tu CV y proba su potencial!!!</b></p>
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center" id="consejos">Consejos para un CV exitoso!!!</h2>
+        
+        <li><b>Usa un Diseño Limpio y Profesional:</b></li>
+        <p>Evita el uso de colores llamativos, fuentes poco legibles o demasiados gráficos. 
+            Un diseño simple con buena estructura mejora la lectura y la aceptación por los <b><em>ATS</em> (sistemas de seguimiento de candidatos).</b></p>
+        <li><b>Incluye Palabras Clave del Sector:</b></li>
+        <p>Muchos reclutadores utilizan software para filtrar CVs. Asegúrate de incluir términos clave relacionados con el puesto que buscas, como tecnologías, 
+            herramientas o metodologías específicas.</p>
+        <li><b>Personaliza tu CV para Cada Oferta:</b></li>
+        <p>No envíes el mismo CV a todas las empresas. Adapta la descripción de tu experiencia y habilidades para que coincidan con los requisitos del puesto.</p>
+        <li><b>Usa un Resumen Profesional Atractivo:</b></li>
+        <p>En lugar de un objetivo genérico, redacta un breve resumen al inicio de tu CV donde destaques tu experiencia, habilidades clave y lo que puedes aportar a la empresa.</p>
+        <li><b>Enfócate en Logros, No Solo en Responsabilidades:</b></li>
+        <p>Describe tus experiencias resaltando logros cuantificables.Ejemplo: "Reduje un 20% el tiempo en el desarrollo de una tarea determinada".</p>
+        <li><b>Mantén un Formato Compatible con ATS:</b></li>
+        <p>Evita tablas, imágenes y formatos inusuales. Usa encabezados claros, listas con viñetas y texto bien estructurado para facilitar la lectura por software de análisis de CV.</p>
+        <li><b>Usa Verbos de Acción:</b></li>
+        <p>Palabras como "desarrollé", "optimizé", "implementé" o "lideré" dan una impresión más fuerte que simplemente decir "encargado de".</p>
+        <li><b>Limita la Extensión a una o Dos Páginas:</b></li>
+        <p>Los reclutadores dedican pocos segundos a cada CV. Sé directo y prioriza la información más relevante para el puesto.</p>
+        <li><b>Evita Información Irrelevante:</b></li>
+        <p>No es necesario incluir datos como estado civil, edad o dirección exacta. Prioriza información profesional relevante.</p>
+        <li><b>Usa un Formato de Archivo Adecuado:</b></li>
+        <p>Los formatos más recomendados son PDF y DOCX. Asegúrate de que el archivo sea fácil de abrir y leer en diferentes dispositivos.</p>
+        <li><b>Muestra Experiencia con Proyectos Personales:</b></li>
+        <p>Si no tienes mucha experiencia laboral, incluir proyectos personales, contribuciones o prácticas puede ayudarte a destacar.</p>
+        <li><b>Añade un Enlace a tu LinkedIn y Portafolio:</b></li>
+        <p>Asegúrate de que tu perfil de LinkedIn y de tu Portafolio estén actualizados y reflejen la información de tu CV. Agregar el enlace puede facilitar la búsqueda de información adicional sobre ti.</p>
+    </div>
+   
+    <div class="container mt-5" id="ejemplos">
+        <h4>Aquí te dejo algunos sitios con ejemplos:</h4>
+        <a target="_blank" href="https://www.plantillascurriculumgratis.website/formato-de-curriculum-vitae-en-espanol/"><img src="img\ej01.jpg" alt="ejemplo-01" id="ej"></a>
+        <a target="_blank" href="https://www.modelos-de-curriculum.com/formato-curriculum-vitae-espanol/"><img src="img\ej02.jpg" alt="ejemplo-02" id="ej"></a>
+        <a target="_blank" href="https://elestudiantedigital.com/curriculum-vitae/"><img src="img\ej03.webp" alt="ejemplo-03" id="ej"></a>
+        <a target="_blank" href="https://cvcrea.es/ejemplos-de-curriculum/espanol/"><img src="img\ej04.jpg" alt="ejemplo-04" id="ej"></a>
+        
+
+
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        &#xa9 Tweegio 2025
+    </footer>
+</body>
+</html>
