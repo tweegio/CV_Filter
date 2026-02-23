@@ -8,7 +8,7 @@ Herramienta web que simula el comportamiento de un sistema **ATS (Applicant Trac
 
 ## Vista previa
 
-![CV Filter Preview](img/preview.png)
+![CV Filter Preview](https://github.com/tweegio/CV_Filter/blob/main/img/pic01.jpg)
 
 ---
 
