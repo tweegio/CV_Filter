@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com https://unpkg.com https://fonts.googleapis.com 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' https: data:; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;">
+    <meta name="description" content="Analizá tu CV con nuestro simulador ATS gratuito. Detectá errores, mejorá palabras clave y aumentá tus chances de pasar los filtros automáticos de las empresas.">
+
+    <title>CV Filter — Simulador ATS para tu Currículum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://unpkg.com/mammoth/mammoth.browser.js"></script>
+
+    <!-- ADSENSE: pegá tu código acá cuando seas aprobado
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    -->
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">CV<strong>Filter</strong></span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#fucionamiento" class="nav-link">¿Cómo funciona?</a></li>
+                <li><a href="#consejos" class="nav-link">Consejos</a></li>
+                <li><a href="#filtro" class="nav-link">Filtrar CV</a></li>
+                <li><a href="#ejemplos" class="nav-link">Ejemplos</a></li>
+                <li><a href="#filtro" class="nav-link nav-cta">Analizar ahora →</a></li>
+            </ul>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+            <div class="hero-blob blob-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Herramienta gratuita · 100% privado</div>
+            <h1 class="hero-title">¿Tu CV pasa el<br><span class="gradient-text">filtro ATS?</span></h1>
+            <p class="hero-subtitle">Simulá el sistema que usan las empresas para descartar CVs automáticamente. Detectá errores antes de postularte.</p>
+            <div class="hero-actions">
+                <a href="#filtro" class="btn-primary">Analizar mi CV</a>
+                <a href="#fucionamiento" class="btn-ghost">¿Cómo funciona?</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">70%</span><span class="stat-label">de CVs son descartados por ATS</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">0%</span><span class="stat-label">de tus datos salen del navegador</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">PDF</span><span class="stat-label">y DOCX compatibles</span></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/imagen-flotante.jpg" alt="Profesional trabajando" id="pic01">
+        </div>
+    </section>
+
+    <!-- ANUNCIO SUPERIOR -->
+    <div class="ad-container ad-top">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+    </div>
+
+    <!-- ===== CÓMO FUNCIONA ===== -->
+    <section class="section section-light" id="fucionamiento">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">El problema</span>
+                <h2>¿Qué es un ATS y por qué importa?</h2>
+                <p>Los sistemas ATS (<em>Applicant Tracking System</em>) son el primer filtro que enfrentás cuando mandás tu CV. Antes de que un humano lo lea, un algoritmo lo evalúa.</p>
+            </div>
+            <div class="how-grid">
+                <div class="how-card">
+                    <div class="how-icon">📄</div>
+                    <h3>Cargá tu CV</h3>
+                    <p>Subí tu archivo PDF o DOCX directamente desde tu dispositivo. Nada se envía a ningún servidor.</p>
+                </div>
+                <div class="how-arrow">→</div>
+                <div class="how-card">
+                    <div class="how-icon">🔍</div>
+                    <h3>Análisis automático</h3>
+                    <p>Nuestro sistema busca palabras clave, verifica el formato y detecta problemas comunes de compatibilidad ATS.</p>
+                </div>
+                <div class="how-arrow">→</div>
+                <div class="how-card">
+                    <div class="how-icon">✅</div>
+                    <h3>Resultados y mejoras</h3>
+                    <p>Recibís un informe claro con lo que está bien, lo que falta, y cómo mejorar tu CV para pasar el filtro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FILTRO CV ===== -->
+    <section class="section section-dark" id="filtro">
+        <div class="section-container">
+            <div class="section-header light">
+                <span class="section-tag tag-light">Herramienta gratuita</span>
+                <h2>Analizá tu CV ahora</h2>
+                <p>Cargá tu archivo y descubrí en segundos si pasa el filtro ATS.</p>
+            </div>
+            <div class="upload-card">
+                <form id="cvForm">
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-icon">📂</div>
+                        <p class="upload-text">Arrastrá tu CV acá o hacé click para elegir</p>
+                        <p class="upload-hint">PDF o DOCX · Procesado 100% en tu navegador</p>
+                        <input type="file" id="cvFile" accept=".pdf,.docx" class="file-input">
+                        <div class="file-selected" id="file-selected"></div>
+                    </div>
+                    <button type="submit" class="btn-analyze" id="btn-analyze">
+                        <span class="btn-text">Analizar CV</span>
+                        <span class="btn-loader" style="display:none">Analizando...</span>
+                    </button>
+                </form>
+                <div class="result-area" id="result01"></div>
+                <div class="result-area" id="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANUNCIO MEDIO -->
+    <div class="ad-container ad-mid">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+    </div>
+
+    <!-- ===== CONSEJOS ===== -->
+    <section class="section section-light" id="consejos">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Guía práctica</span>
+                <h2>12 consejos para un CV exitoso</h2>
+                <p>Pequeños cambios que hacen una gran diferencia.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-num">01</span>
+                    <h4>Diseño limpio y profesional</h4>
+                    <p>Evitá colores llamativos, fuentes poco legibles o muchos gráficos. Simple y bien estructurado gana siempre.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">02</span>
+                    <h4>Palabras clave del sector</h4>
+                    <p>Incluí términos específicos del puesto: tecnologías, herramientas y metodologías que usan en la empresa.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">03</span>
+                    <h4>Personalizá para cada oferta</h4>
+                    <p>No mandes el mismo CV a todas las empresas. Adaptá la descripción para que coincida con el puesto.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">04</span>
+                    <h4>Resumen profesional atractivo</h4>
+                    <p>Reemplazá el objetivo genérico con un resumen breve que destaque tu experiencia y lo que podés aportar.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">05</span>
+                    <h4>Logros, no responsabilidades</h4>
+                    <p>Mostrá resultados cuantificables: <em>"Reduje un 20% el tiempo de desarrollo de una tarea"</em>.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">06</span>
+                    <h4>Formato compatible con ATS</h4>
+                    <p>Nada de tablas ni imágenes decorativas. Encabezados claros, viñetas y texto estructurado.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">07</span>
+                    <h4>Verbos de acción</h4>
+                    <p>"Desarrollé", "optimicé", "implementé", "lideré" — mucho más impacto que "encargado de".</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">08</span>
+                    <h4>Máximo dos páginas</h4>
+                    <p>Los reclutadores dedican segundos a cada CV. Priorizá lo más relevante para el puesto.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">09</span>
+                    <h4>Sin información irrelevante</h4>
+                    <p>Estado civil, edad, dirección exacta — no son necesarios. Enfocate en lo profesional.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">10</span>
+                    <h4>Formato PDF o DOCX</h4>
+                    <p>Son los más compatibles con ATS. Asegurate de que se abra correctamente en cualquier dispositivo.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">11</span>
+                    <h4>Proyectos personales</h4>
+                    <p>Sin mucha experiencia laboral, proyectos personales, contribuciones o prácticas te diferencian.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-num">12</span>
+                    <h4>LinkedIn y Portafolio</h4>
+                    <p>Mantenelos actualizados y coherentes con tu CV. El link facilita que te encuentren.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PALABRAS CLAVE ===== -->
+    <section class="section section-keywords">
+        <div class="section-container">
+            <div class="section-header light">
+                <span class="section-tag tag-light">Diccionario ATS</span>
+                <h2>Palabras clave por sector</h2>
+                <p>Incluí las relevantes para tu área. Podés combinar de diferentes categorías.</p>
+            </div>
+            <div class="keywords-accordion" id="keywords-accordion">
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">💼</span>
+                        <span>Habilidades Generales</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Comunicación:</strong> Comunicación verbal, comunicación escrita, presentación, redacción, informes, negociación, atención al cliente.</div>
+                        <div class="kw-group"><strong>Liderazgo:</strong> Gestión de equipos, supervisión, toma de decisiones, mentoría, dirección de proyectos, planificación estratégica.</div>
+                        <div class="kw-group"><strong>Trabajo en equipo:</strong> Colaboración, cooperación, resolución de conflictos, motivación, liderazgo de equipos.</div>
+                        <div class="kw-group"><strong>Organización:</strong> Gestión del tiempo, priorización, multitarea, planificación, coordinación.</div>
+                        <div class="kw-group"><strong>Resolución de problemas:</strong> Pensamiento crítico, análisis, creatividad, proactividad, innovación.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">💻</span>
+                        <span>Tecnología e IT</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Desarrollo web:</strong> HTML, CSS, JavaScript, React, Node.js, Python, Git, Front-end, Back-end, SQL, APIs, Agile, Scrum.</div>
+                        <div class="kw-group"><strong>Herramientas:</strong> Microsoft Office, Excel, Office 365, gestión de proyectos digitales, análisis de datos.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">📈</span>
+                        <span>Ventas y Marketing</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Gestión de marca:</strong> Branding, posicionamiento de marca, identidad corporativa, imagen de marca.</div>
+                        <div class="kw-group"><strong>Investigación de mercado:</strong> Encuestas, análisis de competencia, tendencias de mercado, informes.</div>
+                        <div class="kw-group"><strong>Estrategias:</strong> Planificación de campañas, segmentación, marketing de contenido, relaciones públicas, eventos, marketing de influencers.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">💰</span>
+                        <span>Administración y Finanzas</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Contabilidad:</strong> Contabilidad general, cuentas por cobrar y pagar, conciliación bancaria, auditoría, presupuestos.</div>
+                        <div class="kw-group"><strong>Recursos humanos:</strong> Reclutamiento, selección de personal, formación y desarrollo, nóminas, gestión del talento.</div>
+                        <div class="kw-group"><strong>Logística:</strong> Gestión de inventarios, transporte, distribución, planificación logística, cadena de suministro.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">🎧</span>
+                        <span>Atención al Cliente</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Soporte:</strong> Soporte al cliente, resolución de quejas, satisfacción del cliente, gestión de incidencias, feedback.</div>
+                        <div class="kw-group"><strong>Ventas y relaciones:</strong> Asesoramiento, ventas en línea, seguimiento de clientes, fidelización, personalización de servicios.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">🎨</span>
+                        <span>Arte, Diseño y Creatividad</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Diseño gráfico:</strong> Adobe Photoshop, Illustrator, diseño de logotipos, identidad corporativa, diseño web, diseño visual.</div>
+                        <div class="kw-group"><strong>Producción audiovisual:</strong> Fotografía, edición de video, creación de contenido visual, retoque fotográfico, modelado 3D.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">🏥</span>
+                        <span>Salud y Bienestar</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Salud:</strong> Atención sanitaria, asistencia médica, diagnóstico, tratamiento, salud preventiva, primeros auxilios.</div>
+                        <div class="kw-group"><strong>Bienestar:</strong> Psicología, asesoramiento, bienestar emocional, gestión del estrés, nutrición, terapias.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">📚</span>
+                        <span>Educación y Capacitación</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Enseñanza:</strong> Planificación educativa, tutoría, formación en línea, materiales didácticos, enseñanza personalizada.</div>
+                        <div class="kw-group"><strong>Formación:</strong> Capacitación, desarrollo profesional, aprendizaje continuo, evaluación del desempeño.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">⚙️</span>
+                        <span>Construcción e Ingeniería</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Construcción:</strong> Gestión de proyectos de construcción, supervisión de obras, control de calidad, seguridad laboral.</div>
+                        <div class="kw-group"><strong>Ingeniería:</strong> Diseño técnico, análisis estructural, CAD, planificación de proyectos, estudios de viabilidad.</div>
+                    </div>
+                </div>
+
+                <div class="kw-item">
+                    <button class="kw-header">
+                        <span class="kw-icon">⚖️</span>
+                        <span>Legal y Derecho</span>
+                        <span class="kw-arrow">+</span>
+                    </button>
+                    <div class="kw-body">
+                        <div class="kw-group"><strong>Abogacía:</strong> Consultoría legal, contratos, cumplimiento, defensa legal, litigios, mediación.</div>
+                        <div class="kw-group"><strong>Compliance:</strong> Cumplimiento normativo, regulaciones, auditoría legal, prevención de riesgos, políticas corporativas.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ANUNCIO INFERIOR -->
+    <div class="ad-container ad-bottom">
+        <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+    </div>
+
+    <!-- ===== EJEMPLOS ===== -->
+    <section class="section section-light" id="ejemplos">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Inspiración</span>
+                <h2>Ejemplos de CV bien estructurados</h2>
+                <p>Visitá estos sitios para ver modelos y plantillas.</p>
+            </div>
+            <div class="examples-grid">
+                <a target="_blank" rel="noopener" href="https://www.plantillascurriculumgratis.website/formato-de-curriculum-vitae-en-espanol/" class="example-card">
+                    <div class="example-img-wrap">
+                        <img src="img/ej01.jpg" alt="Ejemplo de CV 1">
+                    </div>
+                    <span class="example-label">Plantillas Curriculum Gratis</span>
+                </a>
+                <a target="_blank" rel="noopener" href="https://www.modelos-de-curriculum.com/formato-curriculum-vitae-espanol/" class="example-card">
+                    <div class="example-img-wrap">
+                        <img src="img/ej02.jpg" alt="Ejemplo de CV 2">
+                    </div>
+                    <span class="example-label">Modelos de Curriculum</span>
+                </a>
+                <a target="_blank" rel="noopener" href="https://elestudiantedigital.com/curriculum-vitae/" class="example-card">
+                    <div class="example-img-wrap">
+                        <img src="img/ej03.webp" alt="Ejemplo de CV 3">
+                    </div>
+                    <span class="example-label">El Estudiante Digital</span>
+                </a>
+                <a target="_blank" rel="noopener" href="https://cvcrea.es/ejemplos-de-curriculum/espanol/" class="example-card">
+                    <div class="example-img-wrap">
+                        <img src="img/ej04.jpg" alt="Ejemplo de CV 4">
+                    </div>
+                    <span class="example-label">CV Crea</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">CV<strong>Filter</strong></span>
+            </div>
+            <p class="footer-desc">Herramienta gratuita para optimizar tu CV y pasar los filtros ATS.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Política de Privacidad</a>
+                <span>·</span>
+                <a href="mailto:tweegiodeveloper@gmail.com">tweegiodeveloper@gmail.com</a>
+            </div>
+            <p class="footer-copy">© 2025 Tweegio · Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // ===== HAMBURGER MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navbar = document.getElementById('navbar');
+
+    function toggleMenu(open) {
+        hamburger.classList.toggle('active', open);
+        navMenu.classList.toggle('open', open);
+        navOverlay.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = navMenu.classList.contains('open');
+        toggleMenu(!isOpen);
+    });
+
+    navOverlay.addEventListener('click', () => toggleMenu(false));
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ===== UPLOAD AREA DRAG & DROP =====
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('cvFile');
+    const fileSelected = document.getElementById('file-selected');
+
+    uploadArea.addEventListener('click', () => fileInput.click());
+
+    uploadArea.addEventListener('dragover', e => {
+        e.preventDefault();
+        uploadArea.classList.add('dragover');
+    });
+
+    uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('dragover'));
+
+    uploadArea.addEventListener('drop', e => {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+        const file = e.dataTransfer.files[0];
+        if (file) {
+            const dt = new DataTransfer();
+            dt.items.add(file);
+            fileInput.files = dt.files;
+            showFileName(file.name);
+        }
+    });
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files[0]) showFileName(fileInput.files[0].name);
+    });
+
+    function showFileName(name) {
+        fileSelected.innerHTML = `<span class="file-badge">📎 ${name}</span>`;
+    }
+
+    // ===== ACCORDION KEYWORDS =====
+    document.querySelectorAll('.kw-header').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.kw-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.kw-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.tip-card, .how-card, .example-card, .kw-item').forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
+    });
+    </script>
+</body>
+</html>
