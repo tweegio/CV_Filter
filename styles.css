@@ -267,9 +267,8 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--blue) 10%, #7dd3fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0ea5e9;
+    background: linear-gradient(135deg, var(--blue) 80%, #7dd3fc 100%);
     background-clip: text;
 }
 
