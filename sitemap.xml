@@ -28,7 +28,16 @@
   <!-- Artículo 1 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/filtros-ats-que-son.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artículo 2 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/optimizar-linkedin-recien-graduado.html</loc>
+    
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
