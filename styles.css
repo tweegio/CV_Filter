@@ -715,7 +715,7 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
 .examples-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 40px;
 }
 
 .example-card {
