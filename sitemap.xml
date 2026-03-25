@@ -42,6 +42,15 @@
     <priority>0.9</priority>
   </url>
 
+   <!-- Artículo 3 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/optimizar-linkedin-recien-graduado.html</loc>
+    
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- ============================================================
   INSTRUCCIONES: cada vez que publiques un artículo nuevo,
   agregá un bloque <url> acá antes de subir a GitHub.
