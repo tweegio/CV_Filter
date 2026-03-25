@@ -866,7 +866,7 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
         height: 100vh;
         background: var(--navy);
         padding: 90px 28px 40px;
-        gap: 4px;
+        gap: 20px;
         z-index: 1000;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 40px rgba(0,0,0,0.5);
@@ -896,7 +896,7 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
 
     .how-arrow { display: none; }
 
-    .section { padding: 60px 20px; }
+    .section { padding: 60px 30px; }
 
     .tips-grid { grid-template-columns: 1fr 1fr; }
 
@@ -927,6 +927,9 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
 }
 
 @media (max-width: 360px) {
+    .nav-menu{
+        gap:20px;
+    }
     .examples-grid { grid-template-columns: 1fr; }
     .hero-stats { flex-direction: column; }
     .stat-divider { width: 40px; height: 1px; }
