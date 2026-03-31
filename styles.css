@@ -345,12 +345,12 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
     position: relative;
     z-index: 2;
     flex-shrink: 0;
-    padding-left: 60px;
+    padding-left: 80px;
 }
 
 #pic01 {
-    width: 280px;
-    height: 280px;
+    width: 520px;
+    height: auto;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid rgba(14, 165, 233, 0.5);
