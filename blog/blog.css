@@ -389,7 +389,34 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 900px) {
+/* ===== TIPOGRAFÍAS MÁS GRANDES EN DESKTOP ===== */
+@media (min-width: 1024px) {
+    .article-content p {
+        font-size: 1.18rem;
+    }
+
+    .article-content ul li,
+    .article-content ol li {
+        font-size: 1.1rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.9rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .article-title {
+        font-size: 3.4rem;
+    }
+}
+
+
+
+
+   @media (max-width: 900px) {
     .article-layout {
         grid-template-columns: 1fr;
         gap: 0;
