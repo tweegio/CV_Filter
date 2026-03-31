@@ -767,6 +767,32 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
     min-height: 10px;
 }
 
+.btn-blog{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    font-size: larger;
+    background: var(--navy);
+    margin:0;
+    margin-top: 30px;
+    padding: 48px 24px;
+    position: relative;
+    border: solid 2px #0ea5e9;
+
+}
+
+.btn-blog a{
+    margin: 50px;
+    font-size:larger;
+    background-color: #0ea5e9;
+    padding: 5px 5px ;
+    border-radius: 5px;
+    
+
+}
+
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--navy);
@@ -922,6 +948,17 @@ button { font-family: var(--font-display); cursor: pointer; border: none; backgr
     .upload-area { padding: 32px 20px; }
 
     .section-header h2 { font-size: 1.6rem; }
+    
+    .btn-blog{
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    .btn.blog a{
+        margin-top:10px;
+        gap: 10px;
+    }
 
     .footer-links { flex-direction: column; gap: 8px; }
 }

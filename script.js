@@ -147,3 +147,4 @@ function analizarCV(texto) {
 function mostrarResultado(mensaje) {
     const el = document.getElementById("result"); el.innerHTML = mensaje; el.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
+
