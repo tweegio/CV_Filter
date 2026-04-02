@@ -117,6 +117,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+   <!-- Artículo 12 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/como-buscar-empleo-google-jobs.html</loc>
+    
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- ============================================================
   INSTRUCCIONES: cada vez que publiques un artículo nuevo,
   agregá un bloque <url> acá antes de subir a GitHub.
