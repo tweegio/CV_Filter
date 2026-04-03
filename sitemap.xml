@@ -144,5 +144,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+   <!-- Artículo 15 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/mensaje-efectivo-para-enviar-cv.html</loc>
+    
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
  
 </urlset>
