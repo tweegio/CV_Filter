@@ -149,9 +149,17 @@
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/mensaje-efectivo-para-enviar-cv.html</loc>
     
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
  
+   <!-- Artículo 16 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/estrategia-busqueda-empleo-30-dias.html</loc>
+    
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
