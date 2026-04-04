@@ -8,53 +8,44 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Política de privacidad -->
+<!-- Política de privacidad -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/privacy-policy.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Blog índice -->
+<!-- Blog índice -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Artículo 1 -->
+<!-- Artículo 1 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/filtros-ats-que-son.html</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Artículo 2 -->
+<!-- Artículo 2 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/que-buscan-los-reclutadores-2026.html</loc>
-    
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 3 -->
+<!-- Artículo 3 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/optimizar-linkedin-recien-graduado.html</loc>
-    
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Artículo 4 -->
+<!-- Artículo 4 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-usar-computrabajo.html</loc>
-    
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -62,7 +53,6 @@
   <!-- Artículo 5 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/trabajo-remoto-como-conseguirlo.html</loc>
-    
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -70,7 +60,6 @@
   <!-- Artículo 6 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-prepararse-entrevista-trabajo.html</loc>
-    
     <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -78,7 +67,6 @@
   <!-- Artículo 7 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/reconversion-laboral-como-cambiar-de-carrera-2026.html</loc>
-    
     <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -86,7 +74,6 @@
   <!-- Artículo 8 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-negociar-sueldo.html</loc>
-    
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -94,69 +81,63 @@
   <!-- Artículo 9 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-destacarte-sin-experiencia-laboral.html</loc>
-    
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 10 -->
+<!-- Artículo 10 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/mejores-epocas-para-cambiar-de-trabajo.html</loc>
-    
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 11 -->
+<!-- Artículo 11 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-usar-ia-para-buscar-trabajo.html</loc>
-    
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 12 -->
+<!-- Artículo 12 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-buscar-empleo-google-jobs.html</loc>
-    
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 13 -->
+<!-- Artículo 13 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/grupos-facebook-para-conseguir-trabajo.html</loc>
-    
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Artículo 14 -->
+<!-- Artículo 14 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-construir-portfolio-sin-experiencia.html</loc>
-    
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-   <!-- Artículo 15 -->
+<!-- Artículo 15 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/mensaje-efectivo-para-enviar-cv.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+ <!-- Artículo 16 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/estrategia-busqueda-empleo-30-dias.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
- 
-   <!-- Artículo 16 -->
+<!-- Artículo 17 -->
   <url>
-    <loc>https://tweegio.github.io/CV_Filter/blog/estrategia-busqueda-empleo-30-dias.html</loc>
+    <loc>https://tweegio.github.io/CV_Filter/blog/como-crear-marca-personal-profesional.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
