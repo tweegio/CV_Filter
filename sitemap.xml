@@ -138,8 +138,21 @@
 <!-- Artículo 17 -->
   <url>
     <loc>https://tweegio.github.io/CV_Filter/blog/como-crear-marca-personal-profesional.html</loc>
-    
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Artículo 18 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/como-gestionar-postulaciones-laborales.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Artículo 19 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/como-funciona-proceso-seleccion-personal.html</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
