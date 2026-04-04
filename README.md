@@ -90,4 +90,4 @@ No requiere instalación de dependencias ni build process.
 
 ---
 
-*© 2025 Tweegio*
+*© 2026 Tweegio*
