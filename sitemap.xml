@@ -156,4 +156,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+   <!-- Artículo 20 -->
+  <url>
+    <loc>https://tweegio.github.io/CV_Filter/blog/como-funciona-proceso-seleccion-personal.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
