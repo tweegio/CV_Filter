@@ -114,6 +114,10 @@ function analizarCV(texto) {
         recomendaciones.push("✔️ Se encontraron palabras clave: " + palabrasEncontradas.join(", "));
     }
 
+    if(palabrasEncontradas.length > 0 && palabrasEncontradas.length <= 5 ) {
+        recomendaciones.push("🟠 Se encontraron muy pocas palabras clave: " + palabrasEncontradas.join(", "));
+    }
+
     if (!/@+[a-zA-Z_-]+?\.[a-zA-Z]{2,}/.test(texto)) {
         errores.push("🔴 No se encontró un correo electrónico en tu CV.");
     }
@@ -136,9 +140,16 @@ function analizarCV(texto) {
         mensaje += "<h3>✅ No se encontraron problemas significativos en tu CV!!!.</h3>";
     }
 
-    if (recomendaciones.length > 0) {
-        mensaje += "<h3>💡 Esto está genial!!!:</h3><ul>" + recomendaciones.map(reco => `<li>${reco}</li>`).join("") + "</ul>";
-    }
+    if (palabrasEncontradas.length === 0 && errores.length > 0) {
+        mensaje += "<h3>🔴 Tu CV no es apto filtros ATS!!!: optimizalo y volvé a intentar</h3><ul>" + recomendaciones.map(reco => `<li>${reco}</li>`).join("")+"<ul>";
+    } else if (recomendaciones.length < 5) {
+        mensaje += "<h3>💡 Está bien pero puede mejorar!!!:</h3><ul>" + recomendaciones.map(reco => `<li>${reco}</li>`).join("") + "</ul>";
+    }else if (recomendaciones.length <= 10){
+        mensaje += "<h3>🎉 Buen trabajo tu CV se ve Excelente" + recomendaciones.map(reco => `<li>${reco}</li>`).join("") + "</ul>";
+        }else{
+        mensaje += "<h3>❌ Lo sentimos no pudimos analizar tu CV</h3><ul>" + recomendaciones.map(reco => `<li>${reco}</li>`).join("")+"<ul>";
+
+        }
 
     mostrarResultado(mensaje);
 }
