@@ -109,13 +109,13 @@ function analizarCV(texto) {
     let palabrasEncontradas = palabrasClave.filter(palabra => texto.includes(palabra));
 
     if (palabrasEncontradas.length === 0) {
-        errores.push("Tu CV no contiene palabras clave relevantes. Agrega términos específicos de tu industria.");
+        errores.push("🔴 Tu CV no contiene palabras clave relevantes. Agrega términos específicos de tu industria.");
     } else {
         recomendaciones.push("✔️ Se encontraron palabras clave: " + palabrasEncontradas.join(", "));
     }
 
     if (!/@+[a-zA-Z_-]+?\.[a-zA-Z]{2,}/.test(texto)) {
-        errores.push("No se encontró un correo electrónico en tu CV.");
+        errores.push("🔴 No se encontró un correo electrónico en tu CV.");
     }
 
     let palabras = texto.toLowerCase().split(/\s+/);
