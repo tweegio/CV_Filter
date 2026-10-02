@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: README.md
+Sitemap: https://tweegio.github.io/CV_Filter/sitemap.xml
